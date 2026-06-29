@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Essentialis - Consultoría en Calidad y Mejora de Procesos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Inter:wght@400&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#082b72",
+                      "primary": "#f2ca50",
+                      "inverse-primary": "#735c00",
+                      "on-error-container": "#ffdad6",
+                      "background": "#0b1326",
+                      "on-error": "#690005",
+                      "on-tertiary-fixed-variant": "#27438a",
+                      "outline-variant": "#4d4635",
+                      "on-background": "#dae2fd",
+                      "secondary-fixed-dim": "#c0c1ff",
+                      "tertiary-fixed": "#dbe1ff",
+                      "surface-dim": "#0b1326",
+                      "on-surface-variant": "#d0c5af",
+                      "surface-container-highest": "#2d3449",
+                      "error-container": "#93000a",
+                      "primary-fixed": "#ffe088",
+                      "on-secondary-container": "#b0b2ff",
+                      "surface-container-lowest": "#060e20",
+                      "on-tertiary-fixed": "#00174b",
+                      "secondary-fixed": "#e1e0ff",
+                      "tertiary": "#bfcdff",
+                      "on-primary-fixed": "#241a00",
+                      "on-primary": "#3c2f00",
+                      "on-secondary": "#1000a9",
+                      "surface-tint": "#e9c349",
+                      "surface-container-high": "#222a3d",
+                      "surface-container": "#171f33",
+                      "surface-container-low": "#131b2e",
+                      "tertiary-fixed-dim": "#b4c5ff",
+                      "outline": "#99907c",
+                      "on-surface": "#dae2fd",
+                      "primary-container": "#d4af37",
+                      "error": "#ffb4ab",
+                      "on-tertiary-container": "#254188",
+                      "primary-fixed-dim": "#e9c349",
+                      "surface-bright": "#31394d",
+                      "inverse-on-surface": "#283044",
+                      "on-primary-fixed-variant": "#574500",
+                      "surface": "#0b1326",
+                      "surface-variant": "#2d3449",
+                      "on-primary-container": "#554300",
+                      "secondary": "#c0c1ff",
+                      "inverse-surface": "#dae2fd",
+                      "secondary-container": "#3131c0",
+                      "tertiary-container": "#97b0ff",
+                      "on-secondary-fixed": "#07006c",
+                      "on-secondary-fixed-variant": "#2f2ebe"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "md": "2rem",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "xl": "8rem",
+                      "sm": "1rem",
+                      "margin": "max(5vw, 24px)",
+                      "lg": "4rem",
+                      "xs": "0.5rem"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Geist"
+                      ],
+                      "headline-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "mono-sm": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "mono-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glow-overlay {
+            background: radial-gradient(circle at 50% -20%, rgba(212, 175, 55, 0.15), transparent 70%);
+        }
+        
+        /* Premium Gradient Backgrounds */
+        .premium-gradient {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(11, 19, 38, 1) 100%);
+        }
+        
+        .gold-text-gradient {
+            background: linear-gradient(to right, #f2ca50, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .glass-card {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface/80 backdrop-blur-md shadow-sm border-b border-outline-variant/30 fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary">
+            Essentialis
+        </div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#desafios">Desafíos</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#soluciones">Soluciones</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#metodologia">Metodología</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#diferencial">Diferencial</a>
+</div>
+<a class="hidden md:inline-flex px-md py-sm bg-primary-container text-on-primary-container font-label-md text-label-md rounded hover:opacity-90 transition-opacity" href="#contacto">
+            Contact
+        </a>
+</nav>
+<main class="pt-[100px]">
+<!-- 1. Hero -->
+<section class="relative min-h-[921px] flex items-center justify-center px-margin py-xl overflow-hidden premium-gradient">
+<div class="absolute inset-0 glow-overlay pointer-events-none"></div>
+<div class="max-w-container-max w-full mx-auto relative z-10 text-center flex flex-col items-center">
+<span class="font-mono-sm text-mono-sm text-primary-fixed uppercase tracking-widest mb-sm fade-in-up">Essentialis</span>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg max-w-4xl mb-md fade-in-up" style="transition-delay: 0.1s;">
+                    Consultoría en Calidad y <br class="hidden md:block"/>
+<span class="gold-text-gradient">Mejora de Procesos</span>
+</h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant max-w-2xl mb-lg font-light fade-in-up" style="transition-delay: 0.2s;">
+                    La calidad comienza por identificar lo esencial.
+                </p>
+<p class="font-body-lg text-body-lg text-on-surface max-w-3xl text-center mb-xl opacity-90 fade-in-up" style="transition-delay: 0.3s;">
+                    Ayudamos a organizaciones a detectar puntos de dolor, ordenar procesos y transformar oportunidades de mejora en acciones concretas que generen confianza, eficiencia y mejores resultados.
+                </p>
+<a class="inline-flex items-center gap-xs px-lg py-md bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-md text-label-md rounded shadow-[0_0_30px_rgba(212,175,55,0.3)] hover:shadow-[0_0_40px_rgba(212,175,55,0.5)] transition-all fade-in-up" href="#contacto" style="transition-delay: 0.4s;">
+                    Solicitar una primera reunión
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- 2. Problem Section -->
+<section class="px-margin py-xl max-w-container-max mx-auto" id="desafios">
+<div class="mb-lg fade-in-up">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-sm">¿Tu empresa enfrenta alguno de estos desafíos?</h2>
+<div class="w-24 h-1 bg-primary/30 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="glass-card p-md rounded-lg fade-in-up">
+<div class="w-12 h-12 rounded bg-error-container/20 flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-error">repeat</span>
+</div>
+<h3 class="font-headline-md text-[20px] mb-xs">Errores recurrentes</h3>
+<p class="text-on-surface-variant font-body-md">Patrones de fallas que se repiten sin solución definitiva, afectando la calidad final.</p>
+</div>
+<div class="glass-card p-md rounded-lg fade-in-up" style="transition-delay: 0.1s;">
+<div class="w-12 h-12 rounded bg-surface-variant flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-outline">account_tree</span>
+</div>
+<h3 class="font-headline-md text-[20px] mb-xs">Procesos desordenados</h3>
+<p class="text-on-surface-variant font-body-md">Flujos de trabajo caóticos, falta de estandarización y roles poco claros en el equipo.</p>
+</div>
+<div class="glass-card p-md rounded-lg fade-in-up" style="transition-delay: 0.2s;">
+<div class="w-12 h-12 rounded bg-error-container/20 flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-error">timer_off</span>
+</div>
+<h3 class="font-headline-md text-[20px] mb-xs">Tiempo perdido en urgencias</h3>
+<p class="text-on-surface-variant font-body-md">Gestión reactiva, apagando incendios constantemente en lugar de planificar el crecimiento.</p>
+</div>
+<div class="glass-card p-md rounded-lg fade-in-up" style="transition-delay: 0.3s;">
+<div class="w-12 h-12 rounded bg-error-container/20 flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-error">sentiment_dissatisfied</span>
+</div>
+<h3 class="font-headline-md text-[20px] mb-xs">Insatisfacción del cliente</h3>
+<p class="text-on-surface-variant font-body-md">Quejas recurrentes, pérdida de confianza y deterioro de la imagen de marca por fallas en el servicio.</p>
+</div>
+<div class="glass-card p-md rounded-lg fade-in-up" style="transition-delay: 0.4s;">
+<div class="w-12 h-12 rounded bg-surface-variant flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-outline">visibility_off</span>
+</div>
+<h3 class="font-headline-md text-[20px] mb-xs">Prioridades poco claras</h3>
+<p class="text-on-surface-variant font-body-md">Falta de alineación estratégica, esfuerzos dispersos que no impactan en los objetivos centrales.</p>
+</div>
+<div class="glass-card p-md rounded-lg fade-in-up" style="transition-delay: 0.5s;">
+<div class="w-12 h-12 rounded bg-surface-variant flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined text-outline">trending_down</span>
+</div>
+<h3 class="font-headline-md text-[20px] mb-xs">Oportunidades sin implementar</h3>
+<p class="text-on-surface-variant font-body-md">Ideas de mejora detectadas pero que nunca se ejecutan por falta de método y seguimiento.</p>
+</div>
+</div>
+</section>
+<!-- 3. Solution Section -->
+<section class="bg-surface-container-low px-margin py-xl" id="soluciones">
+<div class="max-w-container-max mx-auto">
+<div class="mb-lg fade-in-up">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-sm">Cómo podemos ayudarte</h2>
+<div class="w-24 h-1 bg-primary/30 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="space-y-md">
+<div class="flex items-start gap-sm fade-in-up">
+<span class="material-symbols-outlined text-primary text-[32px] mt-1">analytics</span>
+<div>
+<h4 class="font-headline-md text-[20px] mb-1">Diagnóstico profundo</h4>
+<p class="text-on-surface-variant text-body-md">Análisis objetivo de la situación actual para entender el origen real de los problemas.</p>
+</div>
+</div>
+<div class="flex items-start gap-sm fade-in-up" style="transition-delay: 0.1s;">
+<span class="material-symbols-outlined text-primary text-[32px] mt-1">find_in_page</span>
+<div>
+<h4 class="font-headline-md text-[20px] mb-1">Identificación de puntos de dolor</h4>
+<p class="text-on-surface-variant text-body-md">Mapeo preciso de cuellos de botella y áreas de ineficiencia crítica.</p>
+</div>
+</div>
+<div class="flex items-start gap-sm fade-in-up" style="transition-delay: 0.2s;">
+<span class="material-symbols-outlined text-primary text-[32px] mt-1">gpp_good</span>
+<div>
+<h4 class="font-headline-md text-[20px] mb-1">Prevención de errores y riesgos</h4>
+<p class="text-on-surface-variant text-body-md">Diseño de controles preventivos robustos antes de que los fallos ocurran.</p>
+</div>
+</div>
+<div class="flex items-start gap-sm fade-in-up" style="transition-delay: 0.3s;">
+<span class="material-symbols-outlined text-primary text-[32px] mt-1">support_agent</span>
+<div>
+<h4 class="font-headline-md text-[20px] mb-1">Mejora de la experiencia del cliente</h4>
+<p class="text-on-surface-variant text-body-md">Alineación de procesos internos para garantizar la satisfacción externa.</p>
+</div>
+</div>
+<div class="flex items-start gap-sm fade-in-up" style="transition-delay: 0.4s;">
+<span class="material-symbols-outlined text-primary text-[32px] mt-1">model_training</span>
+<div>
+<h4 class="font-headline-md text-[20px] mb-1">Optimización de procesos</h4>
+<p class="text-on-surface-variant text-body-md">Simplificación y estandarización para lograr flujos de trabajo ágiles y eficientes.</p>
+</div>
+</div>
+</div>
+<div class="h-full w-full rounded-lg overflow-hidden glass-card p-1 fade-in-up">
+<div class="bg-cover bg-center w-full h-[500px] rounded object-cover" data-alt="Abstract minimal 3D render of interconnected golden nodes and clean geometric shapes on a deep dark blue background. The lighting is high-end studio lighting, soft shadows, representing process optimization, corporate elegance, and clarity. Premium consultancy aesthetic, modern light-source driven gradients." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAORJVEmEo-UFtUzilv3l2lwxLtN6DzHdrodCL82K09e74o2RkhiQNRvB2iHXoI5NfbnkwFtFF1gkVxnnG_oi6yuQZXHJYd6qfiPBQEUPfzI-kfkC3uaY1F7Tz2BwF5aBJuJFMGxO-iDztqdFYaxx37iG_Z6lFsZS4sxJSGNyi2CLeYfgpH962QEmVYyhttTF1TzkDj8-W-dbW95fdIk_U5P68KK6K494f6oSeFcNDRY60n7cg1uWR273qGVJGyibf7I6Xpf6h0g0k')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Closing & Contact -->
+<section class="px-margin py-xl max-w-container-max mx-auto text-center fade-in-up" id="contacto">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg max-w-4xl mx-auto mb-lg">
+                "La calidad no consiste únicamente en encontrar errores, <br class="hidden md:block"/>
+<span class="gold-text-gradient">sino en construir sistemas que prevengan su aparición."</span>
+</h2>
+<div class="max-w-2xl mx-auto glass-card p-xl rounded-lg text-left mt-xl">
+<h3 class="font-headline-md text-headline-md mb-md text-center">Contacta con Essentialis</h3>
+<form class="space-y-sm">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-xs">Nombre completo</label>
+<input class="w-full bg-surface border border-outline-variant rounded p-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Ej. Juan Pérez" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-xs">Email corporativo</label>
+<input class="w-full bg-surface border border-outline-variant rounded p-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="juan@empresa.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-xs">Mensaje / Desafío principal</label>
+<textarea class="w-full bg-surface border border-outline-variant rounded p-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Cuéntanos brevemente sobre la situación de tu empresa..." rows="4"></textarea>
+</div>
+<div class="pt-sm">
+<button class="w-full py-md bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-md text-label-md rounded shadow-md hover:opacity-90 transition-opacity" type="button">
+                            Solicitar una primera reunión
+                        </button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-xl px-margin flex flex-col md:flex-row justify-between items-center gap-gutter border-t border-outline-variant/20">
+<div class="font-display-lg text-headline-md text-primary">
+            Essentialis
+        </div>
+<div class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">
+            © 2024 Essentialis. Precision Elegance in Process Consulting.
+        </div>
+<div class="flex gap-gutter">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">Privacidad</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">Términos</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">LinkedIn</a>
+</div>
+</footer>
+<script>
+        // Smooth reveal animation on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach((elem) => {
+                observer.observe(elem);
+            });
+        });
+    </script>
+</body></html>
