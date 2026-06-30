@@ -1,0 +1,47 @@
+/* ============================================
+   Essentialis - Estilos personalizados
+   ============================================ */
+
+/* --- Animaciones de scroll --- */
+/* Los elementos con esta clase comienzan invisibles y se desplazan hacia arriba.
+   La clase .visible se agrega via JS cuando el elemento entra en viewport. */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Efecto de brillo superior del hero --- */
+/* Gradiente radial que simula iluminación desde arriba */
+.glow-overlay {
+    background: radial-gradient(circle at 50% -20%, rgba(212, 175, 55, 0.15), transparent 70%);
+}
+
+/* --- Fondo premium del hero --- */
+/* Gradiente diagonal sutil con tono dorado */
+.premium-gradient {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(11, 19, 38, 1) 100%);
+}
+
+/* --- Texto con degradado dorado --- */
+/* Aplica un gradiente horizontal al texto usando background-clip */
+.gold-text-gradient {
+    background: linear-gradient(to right, #f2ca50, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* --- Tarjetas con efecto vidrio (glassmorphism) --- */
+/* Fondo semitransparente con blur, bordes sutiles y sombra profundidad */
+.glass-card {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
