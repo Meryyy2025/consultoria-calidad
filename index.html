@@ -4,10 +4,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Essentialis - Consultoría en Calidad y Mejora de Procesos</title>
+<meta name="description" content="Consultoría especializada en calidad y mejora de procesos. Diagnosticamos, optimizamos y transformamos operaciones para generar eficiencia y mejores resultados."/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&amp;family=Inter:wght@400&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Estilos personalizados (glassmorphism, animaciones, gradientes) -->
+<link href="css/styles.css" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
@@ -171,43 +173,11 @@
           },
         }
       </script>
-<style>
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .fade-in-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .glow-overlay {
-            background: radial-gradient(circle at 50% -20%, rgba(212, 175, 55, 0.15), transparent 70%);
-        }
-        
-        /* Premium Gradient Backgrounds */
-        .premium-gradient {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(11, 19, 38, 1) 100%);
-        }
-        
-        .gold-text-gradient {
-            background: linear-gradient(to right, #f2ca50, #d4af37);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .glass-card {
-            background: rgba(15, 23, 42, 0.4);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-    </style>
 </head>
 <body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar -->
-<nav class="bg-surface/80 dark:bg-surface/80 backdrop-blur-md shadow-sm border-b border-outline-variant/30 fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin py-4 max-w-container-max mx-auto">
+<nav class="bg-surface/80 dark:bg-surface/80 backdrop-blur-md shadow-sm border-b border-outline-variant/30 fixed top-0 left-0 w-full z-50">
+<div class="flex justify-between items-center px-margin py-4 max-w-container-max mx-auto">
 <div class="font-display-lg text-headline-md tracking-tighter text-primary">
             Essentialis
         </div>
@@ -215,11 +185,25 @@
 <a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#desafios">Desafíos</a>
 <a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#soluciones">Soluciones</a>
 <a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#metodologia">Metodología</a>
-<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300" href="#diferencial">Diferencial</a>
 </div>
-<a class="hidden md:inline-flex px-md py-sm bg-primary-container text-on-primary-container font-label-md text-label-md rounded hover:opacity-90 transition-opacity" href="#contacto">
-            Contact
-        </a>
+<div class="hidden md:inline-flex">
+<a class="px-md py-sm bg-primary-container text-on-primary-container font-label-md text-label-md rounded hover:opacity-90 transition-opacity" href="#contacto">
+                Contacto
+            </a>
+</div>
+<button id="menu-toggle" class="md:hidden text-on-surface-variant hover:text-primary transition-colors" aria-label="Abrir menú">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
+<!-- Mobile menu -->
+<div id="mobile-menu" class="hidden md:hidden px-margin pb-sm">
+<div class="flex flex-col gap-sm border-t border-outline-variant/30 pt-sm">
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 py-xs" href="#desafios">Desafíos</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 py-xs" href="#soluciones">Soluciones</a>
+<a class="font-label-md text-label-md text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 py-xs" href="#metodologia">Metodología</a>
+<a class="inline-flex justify-center px-md py-sm bg-primary-container text-on-primary-container font-label-md text-label-md rounded hover:opacity-90 transition-opacity mt-xs" href="#contacto">Contacto</a>
+</div>
+</div>
 </nav>
 <main class="pt-[100px]">
 <!-- 1. Hero -->
@@ -340,36 +324,68 @@
 </div>
 </div>
 <div class="h-full w-full rounded-lg overflow-hidden glass-card p-1 fade-in-up">
-<div class="bg-cover bg-center w-full h-[500px] rounded object-cover" data-alt="Abstract minimal 3D render of interconnected golden nodes and clean geometric shapes on a deep dark blue background. The lighting is high-end studio lighting, soft shadows, representing process optimization, corporate elegance, and clarity. Premium consultancy aesthetic, modern light-source driven gradients." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAORJVEmEo-UFtUzilv3l2lwxLtN6DzHdrodCL82K09e74o2RkhiQNRvB2iHXoI5NfbnkwFtFF1gkVxnnG_oi6yuQZXHJYd6qfiPBQEUPfzI-kfkC3uaY1F7Tz2BwF5aBJuJFMGxO-iDztqdFYaxx37iG_Z6lFsZS4sxJSGNyi2CLeYfgpH962QEmVYyhttTF1TzkDj8-W-dbW95fdIk_U5P68KK6K494f6oSeFcNDRY60n7cg1uWR273qGVJGyibf7I6Xpf6h0g0k')"></div>
+<div class="bg-cover bg-center w-full h-[500px] rounded object-cover" alt="Renderizado 3D minimalista de nodos dorados interconectados y formas geométricas sobre fondo azul oscuro, representando optimización de procesos y elegancia corporativa." role="img" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAORJVEmEo-UFtUzilv3l2lwxLtN6DzHdrodCL82K09e74o2RkhiQNRvB2iHXoI5NfbnkwFtFF1gkVxnnG_oi6yuQZXHJYd6qfiPBQEUPfzI-kfkC3uaY1F7Tz2BwF5aBJuJFMGxO-iDztqdFYaxx37iG_Z6lFsZS4sxJSGNyi2CLeYfgpH962QEmVYyhttTF1TzkDj8-W-dbW95fdIk_U5P68KK6K494f6oSeFcNDRY60n7cg1uWR273qGVJGyibf7I6Xpf6h0g0k')"></div>
 </div>
 </div>
 </div>
 </section>
-<!-- 6. Closing & Contact -->
+<!-- 4. Metodología -->
+<section class="px-margin py-xl max-w-container-max mx-auto" id="metodologia">
+<div class="mb-lg fade-in-up">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-sm">Nuestra metodología</h2>
+<div class="w-24 h-1 bg-primary/30 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="glass-card p-md rounded-lg text-center fade-in-up">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-sm">
+<span class="font-display-lg text-headline-md text-primary">1</span>
+</div>
+<h3 class="font-headline-md text-[20px] mb-xs">Observar</h3>
+<p class="text-on-surface-variant font-body-md">Escuchamos, mapeamos y comprendemos tu realidad operativa sin supuestos.</p>
+</div>
+<div class="glass-card p-md rounded-lg text-center fade-in-up" style="transition-delay: 0.1s;">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-sm">
+<span class="font-display-lg text-headline-md text-primary">2</span>
+</div>
+<h3 class="font-headline-md text-[20px] mb-xs">Diseñar</h3>
+<p class="text-on-surface-variant font-body-md">Proponemos soluciones claras, priorizadas y adaptables a tu equipo.</p>
+</div>
+<div class="glass-card p-md rounded-lg text-center fade-in-up" style="transition-delay: 0.2s;">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-sm">
+<span class="font-display-lg text-headline-md text-primary">3</span>
+</div>
+<h3 class="font-headline-md text-[20px] mb-xs">Implementar</h3>
+<p class="text-on-surface-variant font-body-md">Acompañamos la ejecución con seguimiento, métricas y ajustes sobre la marcha.</p>
+</div>
+</div>
+</section>
+<!-- 5. Closing & Contact -->
 <section class="px-margin py-xl max-w-container-max mx-auto text-center fade-in-up" id="contacto">
 <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg max-w-4xl mx-auto mb-lg">
                 "La calidad no consiste únicamente en encontrar errores, <br class="hidden md:block"/>
 <span class="gold-text-gradient">sino en construir sistemas que prevengan su aparición."</span>
 </h2>
-<div class="max-w-2xl mx-auto glass-card p-xl rounded-lg text-left mt-xl">
+<div class="max-w-2xl mx-auto glass-card p-md md:p-xl rounded-lg text-left mt-xl">
 <h3 class="font-headline-md text-headline-md mb-md text-center">Contacta con Essentialis</h3>
-<form class="space-y-sm">
+<form class="space-y-sm" id="contact-form" action="https://formspree.io/f/mykqpvyb" method="POST">
 <div>
 <label class="block font-label-md text-label-md text-on-surface-variant mb-xs">Nombre completo</label>
-<input class="w-full bg-surface border border-outline-variant rounded p-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Ej. Juan Pérez" type="text"/>
+<input class="w-full bg-surface border border-outline-variant rounded p-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Ej. Juan Pérez" type="text" name="nombre" required/>
 </div>
 <div>
-<label class="block font-label-md text-label-md text-on-surface-variant mb-xs">Email corporativo</label>
-<input class="w-full bg-surface border border-outline-variant rounded p-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="juan@empresa.com" type="email"/>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-xs">Email de contacto</label>
+<input class="w-full bg-surface border border-outline-variant rounded p-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="juan@empresa.com" type="email" name="email" required/>
 </div>
 <div>
 <label class="block font-label-md text-label-md text-on-surface-variant mb-xs">Mensaje / Desafío principal</label>
-<textarea class="w-full bg-surface border border-outline-variant rounded p-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Cuéntanos brevemente sobre la situación de tu empresa..." rows="4"></textarea>
+<textarea class="w-full bg-surface border border-outline-variant rounded p-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Cuéntanos brevemente sobre la situación de tu empresa..." rows="4" name="mensaje" required></textarea>
 </div>
 <div class="pt-sm">
-<button class="w-full py-md bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-md text-label-md rounded shadow-md hover:opacity-90 transition-opacity" type="button">
+<button class="w-full py-md bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-md text-label-md rounded shadow-md hover:opacity-90 transition-opacity" type="submit">
                             Solicitar una primera reunión
                         </button>
+<p id="form-success" class="text-primary text-body-md text-center mt-sm hidden">¡Gracias! Te contactaremos pronto.</p>
+<p id="form-error" class="text-error text-body-md text-center mt-sm hidden">Hubo un error. Intentá de nuevo o escribinos directamente.</p>
 </div>
 </form>
 </div>
@@ -381,7 +397,7 @@
             Essentialis
         </div>
 <div class="font-body-md text-body-md text-on-surface-variant text-center md:text-left">
-            © 2024 Essentialis. Precision Elegance in Process Consulting.
+            © 2025 Essentialis. Precision Elegance in Process Consulting.
         </div>
 <div class="flex gap-gutter">
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">Privacidad</a>
@@ -389,27 +405,6 @@
 <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">LinkedIn</a>
 </div>
 </footer>
-<script>
-        // Smooth reveal animation on scroll
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.fade-in-up').forEach((elem) => {
-                observer.observe(elem);
-            });
-        });
-    </script>
+<!-- Lógica principal (animaciones, menú móvil, formulario) -->
+<script src="js/main.js"></script>
 </body></html>
